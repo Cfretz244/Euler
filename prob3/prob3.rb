@@ -1,15 +1,3 @@
-$queue = []
-def isPrime num
-    divisor = Math.sqrt(num).ceil
-    while divisor > 1
-        if num % divisor == 0
-            return divisor
-        end
-        divisor -= 1
-    end
-    true
-end
-
 def eratosthenes max
     sieve = Hash.new
     max.times do |x|
