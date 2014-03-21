@@ -1,6 +1,6 @@
 def eratosthenes term
     sieve = Hash.new
-    max = 1000000
+    max = 10000000
     primeCount = 0
     x = 0
     until primeCount == term
