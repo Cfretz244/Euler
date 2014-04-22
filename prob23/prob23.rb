@@ -5,8 +5,8 @@ def divisorSum term
     sum = 0
     for i in 1..sqrt
         if term % i == 0
-            i != 1 ? counter = term / i : counter = 0
-            sum += i + counter
+            counter = term / i
+            (counter != i and i != 1) ? sum += i + counter : sum += i
         end
     end
     sum
@@ -16,7 +16,7 @@ abundants = Set.new
 pairs = Set.new
 composites = Set.new
 results = Set.new
-for i in 12..28123
+for i in 1..28123
     if i < divisorSum(i)
         abundants.add i
     end
